@@ -1,0 +1,34 @@
+programa
+{
+	
+	funcao inicio()
+ 
+	{
+		real numero, soma = 0.0 , media
+		inteiro contador, loop
+		escreva("quantas pessoas para comparar a media? ")
+		leia(loop)
+		//aqui esta adicionando um valor ao loop
+		
+		para(contador = 1 ;contador <= loop ; contador++){
+ 			//(contador  = 1) esta adiionando um valor para a variavel contador om o valor (1)
+ 			/*(contador <= loop) ontador = (1) se o loop for menor que a variavel ontador (1)-
+ 			ele vai ontinuar o loop */
+ 			/*(contador++) aqui esta dizendo que a cada vez que der uma volta ompleta (loop)
+ 			o contador somar 1 ou seja, toda vez q rodar o contador vai valer 1 a mais  */
+ 			/*quando o loop que o ontador o programa ira parar*/
+			limpa()
+			escreva("informe a idade do ", contador, "° usuario: ")
+			leia(numero)
+			soma = soma + numero
+			//aqui esta dizendo q a da vez que rodar o  programa ele vai armazenar o numero na soma
+			//o valor do primeiro numero vai fiar na soma depois disso vai omeçar a somar todos
+			//e colocar o valor na variavel soma
+			
+		}
+		media  = soma / loop
+		/*aqui esta dizendo para dividir a soma pela quantidade de pessoas, ou seja ela vai pegar a soma de todos
+		os usuarios e vai dividir ela pelo numero de usuarios informados*/
+		escreva(media)
+	}
+}
