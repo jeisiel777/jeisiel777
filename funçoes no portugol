@@ -1,0 +1,22 @@
+programa {
+	funcao inicio() {
+		inteiro multiplicando, multiplicador
+		
+		multiplicando = recolha_de_dados()
+		multiplicador = recolha_de_dados()
+		
+		escreva("O produto é: ", multiplicar(multiplicando, multiplicador))
+	}
+	
+	funcao inteiro multiplicar(inteiro multiplicando, inteiro multiplicador){
+	    inteiro produto = multiplicando * multiplicador
+	    retorne produto
+	}
+	
+	funcao inteiro recolha_de_dados(){
+	    inteiro numero
+	    escreva("Digite um numero: ")
+	    leia(numero)
+	    retorne numero
+	}
+}
