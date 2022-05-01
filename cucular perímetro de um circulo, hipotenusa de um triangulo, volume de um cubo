@@ -1,0 +1,110 @@
+programa
+{
+	inclua biblioteca Matematica --> mat
+	funcao inicio()
+	{
+		inteiro um = 1
+	enquanto(um == 1){
+		inteiro valor
+		escreva("\n  \nexercicios \n1)perímetro  de  um  circulo: \n2)hipotesusa de um triangulo: \n3)calcaucular volume do cubo:\n4)sair: ")
+		leia(valor)
+		se(valor == 4){
+			um = 2
+		}
+		resposta(valor)
+		}
+	}
+	funcao inteiro resposta(inteiro num1){
+		inteiro  num = 1, duvida, aleatorio = 9849849
+		limpa()
+		escolha(num1){
+			caso 1: 
+			   	escreva("1)explicação sobre o assunto\n2)começar agora")
+				leia(duvida)
+				escolha(duvida){
+					caso 1:
+						explica(1)
+						pare
+					caso 2:
+						cauc(1)
+						pare
+				}
+			   	pare
+			   	
+			caso 2:
+				escreva("1)explicação sobre o assunto\n2)começar agora")
+				leia(duvida)
+				escolha(duvida){
+					caso 1:
+						explica(2)
+						pare
+					caso 2:
+						cauc(2)
+				}
+				
+				pare
+				
+			caso 3:
+				escreva("1)explicação sobre o assunto\n2)começar agora")
+				leia(duvida)
+				escolha(duvida){
+					caso 1:
+						explica(3)
+						pare
+					caso 2:
+						cauc(3)
+						pare
+				}
+		}
+		 
+		retorne num
+			
+    }
+	funcao   cauc(inteiro recebido){
+		inteiro num_1 = 0, num_2 = 0, num_3 = 0, duvida, resul, aux
+		real PI = 3.14, num
+		escolha(recebido){
+			caso 1:
+				limpa()
+				escreva("raio do circulo")
+				leia(num_1)
+				resul = 2 * PI * num_1
+				escreva("o perímetro do circulo é  ", resul,"CM²")	
+				pare	 
+			caso 2:
+				escreva("primeiro cateto(A): ")
+				leia(num_1)
+				escreva("seguno cateto(B): ")
+				leia(num_2)
+				aux = mat.potencia(num_1, 2) + mat.potencia(num_2, 2)
+				resul = mat.raiz(aux, 2)
+				escreva(resul)
+				pare
+			caso 3:
+				escreva("qual a altura do cubo em centimetros: ") 
+				leia(num)
+				resul = mat.potencia(num, 3.0)  
+				escreva("\no volume do cubo é: ", resul, "CM²\n")
+		}
+	}
+	funcao explica(inteiro null){	
+		escolha(null){
+			caso 1:
+				limpa()
+				escreva("Para calcular o perímetro do círculo devemos utilizar a fórmula do perímetro da circunferência\n")
+				escreva("já que o círculo é limitado pela mesma. Então a fórmula do perímetro é:\n\n P = 2 . π . r\n") 
+				escreva("\nP: é o perímetro;\nπ: é o número pi (3,14);\nr: é a medida do raio;\n")
+				pare
+			caso 2:
+				limpa()	
+				escreva("Para aplicação do teorema de Pitágoras, é necessário compreender as nomenclaturas dos lados ")
+				escreva("\nde um triângulo retângulo. O maior lado do triângulo fica sempre oposto ao maior ângulo,\n que é o ângulo de 90°.")
+				escreva("\nEsse lado recebe o nome de hipotenusa e sera representado aqui pela letra a.")
+				escreva("\nOs demais lados do triângulo são chamados de catetos")
+				pare
+			caso 3:
+				escreva("o volume do cubo é calculado considerando a largura, o comprimento e a altura. Dessa forma, chegaremos a\n")
+				escreva("seguinte fórmula: (V = a . a . a)")
+		}
+	}
+}
